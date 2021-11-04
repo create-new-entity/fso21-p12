@@ -1,0 +1,22 @@
+Script started on 2021-11-04 14:10:10+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="90" LINES="22"]
+]0;pavel@LAPTOP-I4P13T82: ~[01;32mpavel@LAPTOP-I4P13T82[00m:[01;34m~[00m$ echo "hello"
+hello
+]0;pavel@LAPTOP-I4P13T82: ~[01;32mpavel@LAPTOP-I4P13T82[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2021-11-04 14:10:21+02:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2021-11-04 14:52:49+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="90" LINES="22"]
+]0;pavel@LAPTOP-I4P13T82: ~[01;32mpavel@LAPTOP-I4P13T82[00m:[01;34m~[00m$ docker container run -it ubuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K7b1a6ab2e44d: Pulling fs layer [1B[1A[2K7b1a6ab2e44d: Downloading  293.2kB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  2.063MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  3.533MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  5.602MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  7.965MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  10.03MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  11.79MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  13.86MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  15.92MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  17.97MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  20.04MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  22.38MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  24.44MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Downloading  26.78MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Verifying Checksum [1B[1A[2K7b1a6ab2e44d: Download complete [1B[1A[2K7b1a6ab2e44d: Extracting  294.9kB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  2.654MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  5.014MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  7.078MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  8.847MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  10.03MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  12.09MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  14.75MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting   17.1MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  19.46MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  21.23MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting   23.3MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  24.18MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  25.36MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  27.13MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  28.02MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Extracting  28.57MB/28.57MB[1B[1A[2K7b1a6ab2e44d: Pull complete [1BDigest: sha256:626ffe58f6e7566e00254b638eb7e0f3b11d4da9675088f4781a50ae288f3322
+Status: Downloaded newer image for ubuntu:latest
+]0;root@0152e2c54b0b: /root@0152e2c54b0b:/# [K]0;root@0152e2c54b0b: /root@0152e2c54b0b:/# mkdir /usr/src/app
+]0;root@0152e2c54b0b: /root@0152e2c54b0b:/# touch /usr/src/app/index.js
+]0;root@0152e2c54b0b: /root@0152e2c54b0b:/# [Kexit
+exit
+]0;pavel@LAPTOP-I4P13T82: ~[01;32mpavel@LAPTOP-I4P13T82[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2021-11-04 14:54:46+02:00 [COMMAND_EXIT_CODE="0"]
