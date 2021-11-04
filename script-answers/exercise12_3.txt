@@ -1,0 +1,5 @@
+docker container start -i clever_solomon
+cd /usr/src/app
+apt-get update
+apt-get -y install nano
+nano index.js
