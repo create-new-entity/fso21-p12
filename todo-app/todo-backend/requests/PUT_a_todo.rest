@@ -1,0 +1,7 @@
+PUT http://localhost:3000/todos/618526695495413d1e183f10
+Content-Type: application/json
+
+{
+  "text": "STUPID TO DO",
+  "done": false
+}
