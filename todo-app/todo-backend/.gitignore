@@ -62,3 +62,6 @@ typings/
 
 #ignore mongo_data
 mongo_data
+
+#ignore redis_data
+redis_data
