@@ -1,0 +1,112 @@
+Script started on 2021-11-08 06:17:00+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="90" LINES="22"]
+]0;pavel@LAPTOP-I4P13T82: ~[01;32mpavel@LAPTOP-I4P13T82[00m:[01;34m~[00m$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                     NAMES
+235bb78e79c5   mongo     "docker-entrypoint.s…"   5 minutes ago   Up 5 minutes   0.0.0.0:3456->27017/tcp   docker_mongo
+]0;pavel@LAPTOP-I4P13T82: ~[01;32mpavel@LAPTOP-I4P13T82[00m:[01;34m~[00m$ docker exec -it docker_mongo bash
+]0;root@235bb78e79c5: /root@235bb78e79c5:/# [K]0;root@235bb78e79c5: /root@235bb78e79c5:/# show dbs
+bash: show: command not found
+]0;root@235bb78e79c5: /root@235bb78e79c5:/# mongo
+MongoDB shell version v5.0.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("5a8d94a5-4c65-442c-bf15-3dc44afc5bb6") }
+MongoDB server version: 5.0.3
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+	https://community.mongodb.com
+> show dbs[3G[Jshow dbs[11G
+> show dbs[3G[Jshow dbs[11G
+> clear[3G[Jclear[8G
+uncaught exception: ReferenceError: clear is not defined :
+@(shell):1:1
+> cls[3G[Jcls[6G
+[H[2J> show dbs[3G[Jshow dbs[11G
+> exit[3G[Jexit[7G
+bye
+]0;root@235bb78e79c5: /root@235bb78e79c5:/# mongo -f  -u root -p example
+MongoDB shell version v5.0.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("168f2798-48aa-441f-83c7-06846451bfe6") }
+MongoDB server version: 5.0.3
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2021-11-08T04:12:16.958+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_database[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("6188a384e237e1656cfd0b03"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("6188a384e237e1656cfd0b04"), "text" : "Learn about containers", "done" : false }
+> db.collection([3G[Jdb.collection([17G
+... {[5G[J{[6G
+... text: ''[5G[Jtext: ''[12G[5G[Jtext: 'I'[13G[5G[Jtext: 'In'[14G[5G[Jtext: 'Inc'[15G[5G[Jtext: 'Incr'[16G[5G[Jtext: 'Incre'[17G[5G[Jtext: 'Incres'[18G[5G[Jtext: 'Incre'[17G[5G[Jtext: 'Increa'[18G[5G[Jtext: 'Increas'[19G[5G[Jtext: 'Increase'[20G[5G[Jtext: 'Increase '[21G[5G[Jtext: 'Increase t'[22G[5G[Jtext: 'Increase th'[23G[5G[Jtext: 'Increase the'[24G[5G[Jtext: 'Increase the '[25G[5G[Jtext: 'Increase the n'[26G[5G[Jtext: 'Increase the nu'[27G[5G[Jtext: 'Increase the num'[28G[5G[Jtext: 'Increase the numb'[29G[5G[Jtext: 'Increase the numbe'[30G[5G[Jtext: 'Increase the number'[31G[5G[Jtext: 'Increase the number '[32G[5G[Jtext: 'Increase the number o'[33G[5G[Jtext: 'Increase the number of'[34G[5G[Jtext: 'Increase the number of '[35G[5G[Jtext: 'Increase the number of t'[36G[5G[Jtext: 'Increase the number of to'[37G[5G[Jtext: 'Increase the number of tol'[38G[5G[Jtext: 'Increase the number of to'[37G[5G[Jtext: 'Increase the number of too'[38G[5G[Jtext: 'Increase the number of tool'[39G[5G[Jtext: 'Increase the number of tools'[40G[5G[Jtext: 'Increase the number of tools '[41G[5G[Jtext: 'Increase the number of tools t'[42G[5G[Jtext: 'Increase the number of tools '[41G[5G[Jtext: 'Increase the number of tools i'[42G[5G[Jtext: 'Increase the number of tools in'[43G[5G[Jtext: 'Increase the number of tools in '[44G[5G[Jtext: 'Increase the number of tools in m'[45G[5G[Jtext: 'Increase the number of tools in my'[46G[5G[Jtext: 'Increase the number of tools in my '[47G[5G[Jtext: 'Increase the number of tools in my t'[48G[5G[Jtext: 'Increase the number of tools in my to'[49G[5G[Jtext: 'Increase the number of tools in my too'[50G[5G[Jtext: 'Increase the number of tools in my tool'[51G[5G[Jtext: 'Increase the number of tools in my toolb'[52G[5G[Jtext: 'Increase the number of tools in my toolbe'[53G[5G[Jtext: 'Increase the number of tools in my toolbel'[54G[5G[Jtext: 'Increase the number of tools in my toolbelt'[55G[5G[Jtext: 'Increase the number of tools in my toolbelt'[56G,[5G[Jtext: 'Increase the number of tools in my toolbelt',[57G
+... done: 'false'[5G[Jdone: 'false[17G[5G[Jdone: 'fals[16G[5G[Jdone: 'fal[15G[5G[Jdone: 'fa[14G[5G[Jdone: 'f[13G[5G[Jdone: '[12G[5G[Jdone: [11Gfalse[5G[Jdone: false[16G
+... })[5G[J})[7G^C
+
+> db.collection.insertOne({[3G[Jdb.collection.insertOne({[28G
+... text: "Increase the number of tools in my toolbelt",[5G[Jtext: "Increase the number of tools in my toolbelt",[57G
+... done: false[5G[Jdone: false[16G
+... {[5G[J[5G}{[5G[J}[6G)[5G[J})[7G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("6188a647a2f80a7af138b317")
+}
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("6188a384e237e1656cfd0b03"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("6188a384e237e1656cfd0b04"), "text" : "Learn about containers", "done" : false }
+> db.todos.insertOne({[3G[Jdb.todos.insertOne({[23G
+... {[5G[J[5G"text": "Increase the number of tools in my toolbelt",[5G[J"text": "Increase the number of tools in my toolbelt",[59G
+... "done": false[5G[J"done": false[18G
+... });[5G[J});[8G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("6188a6c0a2f80a7af138b318")
+}
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("6188a384e237e1656cfd0b03"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("6188a384e237e1656cfd0b04"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("6188a6c0a2f80a7af138b318"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+]0;root@235bb78e79c5: /root@235bb78e79c5:/# exit
+exit
+]0;pavel@LAPTOP-I4P13T82: ~[01;32mpavel@LAPTOP-I4P13T82[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2021-11-08 06:29:49+02:00 [COMMAND_EXIT_CODE="0"]
