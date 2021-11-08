@@ -3,6 +3,10 @@ const router = express.Router();
 
 const configs = require('../util/config')
 
+
+const redis = require('../redis');
+console.log('just testing', redis);
+
 let visits = 0
 
 /* GET index data. */
