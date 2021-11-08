@@ -1,5 +1,7 @@
 const express = require('express');
 const { Todo } = require('../mongo')
+const redisFns = require('./../redis/index');
+const redis = require('redis');
 const router = express.Router();
 
 /* GET todos listing. */
@@ -38,6 +40,16 @@ router.post('/', async (req, res) => {
     text: req.body.text,
     done: false
   })
+
+  const keyExists = await redisFns.keyExists('added_todos');
+  if(keyExists) {
+    const currNumberOfTodos = await redisFns.getAsync('added_todos');
+    await redisFns.setAsync('added_todos', '' + (Number(currNumberOfTodos) + 1));
+  }
+  else {
+    await redisFns.setAsync('added_todos', '1');
+  }
+
   res.send(todo);
 });
 

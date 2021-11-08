@@ -1,11 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+const redisFns = require('./../redis/index');
+
 const configs = require('../util/config')
-
-
-const redis = require('../redis');
-console.log('just testing', redis);
 
 let visits = 0
 
@@ -17,6 +15,19 @@ router.get('/', async (req, res) => {
     ...configs,
     visits
   });
+});
+
+router.get('/statistics', async (req, res) => {
+  let keyExists = await redisFns.keyExists('added_todos');
+  if(keyExists) {
+    nTodos = await redisFns.getAsync('added_todos');
+    res.json({
+      "added_todos": nTodos
+    });
+  }
+  else {
+    res.status(404).end();
+  }
 });
 
 module.exports = router;
