@@ -2,5 +2,5 @@ POST http://localhost:3000/todos/
 Content-Type: application/json
 
 {
-  "text": "Fun To Have 2"
+  "text": "After key deletion"
 }

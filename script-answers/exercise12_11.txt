@@ -1,0 +1,33 @@
+Script started on 2021-11-08 08:43:02+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="90" LINES="22"]
+]0;pavel@LAPTOP-I4P13T82: ~[01;32mpavel@LAPTOP-I4P13T82[00m:[01;34m~[00m$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED       STATUS       PORTS                     NAMES
+24e263400a4b   mongo     "docker-entrypoint.s…"   2 hours ago   Up 2 hours   0.0.0.0:3456->27017/tcp   docker_mongo
+7a9e3d3a0fec   redis     "docker-entrypoint.s…"   2 hours ago   Up 2 hours   0.0.0.0:3457->6379/tcp    docker_redis
+]0;pavel@LAPTOP-I4P13T82: ~[01;32mpavel@LAPTOP-I4P13T82[00m:[01;34m~[00m$ docker exec it docker_redis s[Kbash[1@-
+[?2004hroot@7a9e3d3a0fec:/data# KEYS *
+[?2004lbash: KEYS: command not found
+[?2004hroot@7a9e3d3a0fec:/data# redic s-cli
+[?2004l127.0.0.1:6379> [0K127.0.0.1:6379> c[17C[0K127.0.0.1:6379> cl[18C[0K127.0.0.1:6379> cle[19C[0K127.0.0.1:6379> clea[20C[0K127.0.0.1:6379> clear[21C[0K127.0.0.1:6379> clear[21C
+[H[2J127.0.0.1:6379> [0K127.0.0.1:6379> K[17C[0K127.0.0.1:6379> Ke[18C[0K127.0.0.1:6379> Key[19C[0K127.0.0.1:6379> Keys[0;90;49m pattern[0m[20C[0K127.0.0.1:6379> Keys [0;90;49mpattern[0m[21C[0K127.0.0.1:6379> Keys *[0;90;49m [0m[22C[0K127.0.0.1:6379> Keys *[22C
+1) "added_todos"
+127.0.0.1:6379> [0K127.0.0.1:6379> G[17C[0K127.0.0.1:6379> GE[18C[0K127.0.0.1:6379> GET[0;90;49m key[0m[19C[0K127.0.0.1:6379> GET [0;90;49mkey[0m[20C[0K127.0.0.1:6379> GET a[0;90;49m [0m[21C[0K127.0.0.1:6379> GET ad[0;90;49m [0m[22C[0K127.0.0.1:6379> GET add[0;90;49m [0m[23C[0K127.0.0.1:6379> GET adde[0;90;49m [0m[24C[0K127.0.0.1:6379> GET added[0;90;49m [0m[25C[0K127.0.0.1:6379> GET added_[0;90;49m [0m[26C[0K127.0.0.1:6379> GET added_t[0;90;49m [0m[27C[0K127.0.0.1:6379> GET added_to[0;90;49m [0m[28C[0K127.0.0.1:6379> GET added_tod[0;90;49m [0m[29C[0K127.0.0.1:6379> GET added_todo[0;90;49m [0m[30C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[31C[0K127.0.0.1:6379> GET added_todos[31C
+"2"
+127.0.0.1:6379> [0K127.0.0.1:6379> S[17C[0K127.0.0.1:6379> SE[18C[0K127.0.0.1:6379> SET[0;90;49m key value [EX seconds|PX milliseconds|EXAT timestamp|PXAT milliseconds[0m[19C[0K127.0.0.1:6379> SET [0;90;49mkey value [EX seconds|PX milliseconds|EXAT timestamp|PXAT milliseconds[0m[20C[0K127.0.0.1:6379> SET a[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT milliseconds-t[0m[21C[0K127.0.0.1:6379> SET ad[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT milliseconds-[0m[22C[0K127.0.0.1:6379> SET add[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT milliseconds[0m[23C[0K127.0.0.1:6379> SET adde[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT millisecond[0m[24C[0K127.0.0.1:6379> SET added[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT millisecon[0m[25C[0K127.0.0.1:6379> SET added_[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT milliseco[0m[26C[0K127.0.0.1:6379> SET added_t[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT millisec[0m[27C[0K127.0.0.1:6379> SET added_to[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT millise[0m[28C[0K127.0.0.1:6379> SET added_tod[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT millis[0m[29C[0K127.0.0.1:6379> SET added_todo[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT milli[0m[30C[0K127.0.0.1:6379> SET added_todos[0;90;49m value [EX seconds|PX milliseconds|EXAT timestamp|PXAT mill[0m[31C[0K127.0.0.1:6379> SET added_todos [0;90;49mvalue [EX seconds|PX milliseconds|EXAT timestamp|PXAT mill[0m[32C[0K127.0.0.1:6379> SET added_todos 9[0;90;49m [EX seconds|PX milliseconds|EXAT timestamp|PXAT millisec[0m[33C[0K127.0.0.1:6379> SET added_todos 90[0;90;49m [EX seconds|PX milliseconds|EXAT timestamp|PXAT millise[0m[34C[0K127.0.0.1:6379> SET added_todos 900[0;90;49m [EX seconds|PX milliseconds|EXAT timestamp|PXAT millis[0m[35C[0K127.0.0.1:6379> SET added_todos 9001[0;90;49m [EX seconds|PX milliseconds|EXAT timestamp|PXAT milli[0m[36C[0K127.0.0.1:6379> SET added_todos 9001[36C
+OK
+127.0.0.1:6379> [0K127.0.0.1:6379> SET added_todos 9001[0;90;49m [EX seconds|PX milliseconds|EXAT timestamp|PXAT milli[0m[36C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[31C[0K127.0.0.1:6379> GET added_todos[31C
+"9001"
+127.0.0.1:6379> [0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[31C[0K127.0.0.1:6379> GET added_todos[31C
+"9002"
+127.0.0.1:6379> [0K127.0.0.1:6379> D[17C[0K127.0.0.1:6379> DE[18C[0K127.0.0.1:6379> DEL[0;90;49m key [key ...][0m[19C[0K127.0.0.1:6379> DEL [0;90;49mkey [key ...][0m[20C[0K127.0.0.1:6379> DEL a[0;90;49m [key ...][0m[21C[0K127.0.0.1:6379> DEL ad[0;90;49m [key ...][0m[22C[0K127.0.0.1:6379> DEL add[0;90;49m [key ...][0m[23C[0K127.0.0.1:6379> DEL adde[0;90;49m [key ...][0m[24C[0K127.0.0.1:6379> DEL added[0;90;49m [key ...][0m[25C[0K127.0.0.1:6379> DEL added_[0;90;49m [key ...][0m[26C[0K127.0.0.1:6379> DEL added_t[0;90;49m [key ...][0m[27C[0K127.0.0.1:6379> DEL added_to[0;90;49m [key ...][0m[28C[0K127.0.0.1:6379> DEL added_tod[0;90;49m [key ...][0m[29C[0K127.0.0.1:6379> DEL added_todo[0;90;49m [key ...][0m[30C[0K127.0.0.1:6379> DEL added_todos[0;90;49m [key ...][0m[31C[0K127.0.0.1:6379> DEL added_todos[31C
+(integer) 1
+127.0.0.1:6379> [0K127.0.0.1:6379> DEL added_todos[0;90;49m [key ...][0m[31C[0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[31C[0K127.0.0.1:6379> GET added_todos[31C
+(nil)
+127.0.0.1:6379> [0K127.0.0.1:6379> GET added_todos[0;90;49m [0m[31C[0K127.0.0.1:6379> GET added_todos[31C
+"1"
+127.0.0.1:6379> [0K127.0.0.1:6379> e[17C[0K127.0.0.1:6379> ex[18C[0K127.0.0.1:6379> exi[19C[0K127.0.0.1:6379> exit[20C[0K127.0.0.1:6379> exit[20C
+[?2004hroot@7a9e3d3a0fec:/data# exit
+[?2004lexit
+]0;pavel@LAPTOP-I4P13T82: ~[01;32mpavel@LAPTOP-I4P13T82[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2021-11-08 08:48:09+02:00 [COMMAND_EXIT_CODE="0"]
