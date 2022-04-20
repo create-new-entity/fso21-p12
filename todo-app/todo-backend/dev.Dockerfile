@@ -6,6 +6,6 @@ WORKDIR /usr/src/app
 
 COPY --chown=node:node . .
 
-RUN npm ci --only-production
+RUN npm install
 
-CMD npm start
+CMD ["npm", "run", "dev"]

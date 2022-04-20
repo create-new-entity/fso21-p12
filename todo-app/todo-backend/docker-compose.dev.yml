@@ -1,11 +1,33 @@
 version: '3.8'   
 
+
+
 services:
+
+  debug-helper:
+      image: busybox
+  
+  server:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    image: todo-backend-dev
+    container_name: todo-backend-dev
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3001:3002
+    environment:
+      - PORT=3002
+      - REDIS_URL=redis://docker_redis:6379
+      - MONGO_URL=http://mongodb://the_username:the_password@docker_mongo:27017/the_database
+
+
   mongo:
     image: mongo
+    container_name: docker_mongo
     ports:
      - 3456:27017
-    container_name: docker_mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -13,12 +35,16 @@ services:
     volumes:
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
       - ./mongo_data:/data/db
+
+
   redis:
     image: redis
+    container_name: docker_redis
     ports:
       - 3457:6379
-    container_name: docker_redis
     command: ['redis-server', '--appendonly', 'yes']
     volumes:
       - ./redis_data:/data
+    
+  
 

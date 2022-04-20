@@ -2,7 +2,8 @@ version: '3.8'
 
 services:
   app:                    
-    image: fs_todo
+    image: fso21-todo-backend
+    container_name: fso21-todo-backend
     build: .              
     ports:                
-      - 3000:3000
+      - 3000:3001
