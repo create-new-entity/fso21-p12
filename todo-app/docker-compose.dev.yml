@@ -1,13 +1,6 @@
 
 services:
 
-  todo-frontend-dev-for-nginx:
-    image: todo-frontend-dev-for-nginx
-    container_name: todo-frontend-dev-for-nginx
-    build:
-      context: ./todo-frontend
-      dockerfile: dev.Dockerfile
-
   nginx:
     image: nginx:1.20.1
     volumes:
@@ -17,4 +10,32 @@ services:
     container_name: nginx
     depends_on:
       - todo-frontend-dev-for-nginx
+      - todo-backend-dev-for-nginx
+
+  todo-frontend-dev-for-nginx:
+    image: todo-frontend-dev-for-nginx
+    container_name: todo-frontend-dev-for-nginx
+    extends:
+      service: app
+      file: ./todo-frontend/docker-compose.dev.yml
+
+  docker_mongo:
+    extends:
+      service: mongo
+      file: ./todo-backend/docker-compose.dev.yml
+
+  docker_redis:
+    extends:
+      service: redis
+      file: ./todo-backend/docker-compose.dev.yml
+  
+  todo-backend-dev-for-nginx:
+    image: todo-backend-dev-for-nginx
+    container_name: todo-backend-dev-for-nginx
+    extends:
+      service: server
+      file: ./todo-backend/docker-compose.dev.yml
+    depends_on:
+      - docker_mongo
+      - docker_redis
     

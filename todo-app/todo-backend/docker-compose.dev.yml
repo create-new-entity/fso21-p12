@@ -1,7 +1,5 @@
 version: '3.8'   
 
-
-
 services:
 
   debug-helper:
@@ -21,6 +19,9 @@ services:
       - PORT=3002
       - REDIS_URL=redis://docker_redis:6379
       - MONGO_URL=http://mongodb://the_username:the_password@docker_mongo:27017/the_database
+    depends_on:
+      - docker_mongo
+      - docker_redis
 
 
   mongo:
